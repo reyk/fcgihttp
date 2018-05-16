@@ -67,7 +67,7 @@ resolve_host(struct source *ip, const char *host, const char *port)
 	hints.ai_family = AF_INET;
 	hints.ai_socktype = SOCK_STREAM;
 	if ((error = getaddrinfo(host, port, &hints, &res0)) != 0)
-	        errx(1, "%s", gai_strerror(error));
+		errx(1, "%s", gai_strerror(error));
 	for (res = res0; res; res = res->ai_next) {
 		if (getnameinfo(res->ai_addr, res->ai_addrlen,
 		    hbuf, sizeof(hbuf), NULL, 0, NI_NUMERICHOST) != 0)
