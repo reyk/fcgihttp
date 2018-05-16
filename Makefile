@@ -11,4 +11,6 @@ DPADD=		${LIBTLS} ${LIBCRYPTO} ${LIBSSL} ${LIBEVENT}
 LDADD+=         -L/usr/local/lib
 LDADD+=		-lkcgi -lz
 
+LDSTATIC=	-static
+
 .include <bsd.prog.mk>
